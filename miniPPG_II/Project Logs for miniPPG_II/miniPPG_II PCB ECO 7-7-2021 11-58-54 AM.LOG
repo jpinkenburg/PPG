@@ -1,0 +1,152 @@
+Added Component: Designator=C1(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CL02A104KQ2NNNC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "0.1 uF"; VariantName = "[No Variations]"
+Added Component: Designator=C2(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CL02A104KQ2NNNC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "0.1 uF"; VariantName = "[No Variations]"
+Added Component: Designator=D1(FP-6_541-5064_01-4-MFG)
+Add component (AddParameter): Name = "Ambient Temperature Range High"; Value = "+100°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ambient Temperature Range Low"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Automotive"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Automotive Grade"; Value = "Grade 3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Diode"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.vishay.com/docs/81812/temd6200.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dark Current"; Value = "0.0001uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device Class L1"; Value = "Sensors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device Class L2"; Value = "Optical Sensors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device Class L3"; Value = "Photodiodes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digikey Description"; Value = "SENSOR PHOTODIODE 540NM 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.95mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Junction Temp"; Value = "+100°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Description"; Value = "Ambient Light Sensors 16V 100mW 60Deg AEC-Q101 Qualified"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MPN"; Value = "TEMD6200FX01"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Octopart"; Value = "https://octopart.com/temd6200fx01-vishay-19158932"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6.541-5064.01-4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Dissipation"; Value = "100mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reverse Breakdown Voltage"; Value = "16V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sensor Output"; Value = "Photodiode"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-40°C to +100°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range High"; Value = "+100°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range Low"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Viewing Angle"; Value = "120°"; VariantName = "[No Variations]"
+Added Component: Designator=J1(0402)
+Add component (AddParameter): Name = "MPN"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J2(0402)
+Add component (AddParameter): Name = "MPN"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J3(0402)
+Add component (AddParameter): Name = "MPN"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=L1(0402)
+Add component (AddParameter): Name = "MPN"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=LED1(0201)
+Add component (AddParameter): Name = "MPN"; Value = "XZMDR155W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Red"; VariantName = "[No Variations]"
+Added Component: Designator=LED2(0402)
+Add component (AddParameter): Name = "MPN"; Value = "SFH 4043"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "IR LED"; VariantName = "[No Variations]"
+Added Component: Designator=R1(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CRCW0100220RFREL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "220"; VariantName = "[No Variations]"
+Added Component: Designator=R2(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CRCW0100220RFREL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "220"; VariantName = "[No Variations]"
+Added Component: Designator=R3(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CL02A104KQ2NNNC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "0.1 uF"; VariantName = "[No Variations]"
+Added Component: Designator=R4(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CL02A104KQ2NNNC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "0.1 uF"; VariantName = "[No Variations]"
+Added Component: Designator=R5(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CRCW01001M00FREL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1M"; VariantName = "[No Variations]"
+Added Component: Designator=R6(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CRCW01001M00FREL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1M"; VariantName = "[No Variations]"
+Added Component: Designator=R7(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CRCW0100220RFREL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "220"; VariantName = "[No Variations]"
+Added Component: Designator=R8(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CRCW01001M00FREL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1M"; VariantName = "[No Variations]"
+Added Component: Designator=U1(ATTINY10)
+Added Component: Designator=U2(NFC)
+Added Component: Designator=U3(opamp)
+Added Pin To Net: NetName=Ant Pin=C2-1
+Added Pin To Net: NetName=Ant Pin=L1-0
+Added Pin To Net: NetName=Ant Pin=R7-1
+Added Pin To Net: NetName=Ant Pin=U2-8
+Added Net: Name=Ant
+Added Pin To Net: NetName=GND Pin=C1-0
+Added Pin To Net: NetName=GND Pin=C2-0
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Pin To Net: NetName=GND Pin=J2-0
+Added Pin To Net: NetName=GND Pin=LED1-0
+Added Pin To Net: NetName=GND Pin=LED2-0
+Added Pin To Net: NetName=GND Pin=R7-0
+Added Pin To Net: NetName=GND Pin=U1-4B
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Pin To Net: NetName=GND Pin=U2-4
+Added Pin To Net: NetName=GND Pin=U3-1B
+Added Net: Name=GND
+Added Pin To Net: NetName=LED1 Pin=R1-1
+Added Pin To Net: NetName=LED1 Pin=U1-1A
+Added Net: Name=LED1
+Added Pin To Net: NetName=LED2 Pin=R2-1
+Added Pin To Net: NetName=LED2 Pin=U1-3C
+Added Net: Name=LED2
+Added Pin To Net: NetName=NetL1_1 Pin=L1-1
+Added Pin To Net: NetName=NetL1_1 Pin=U2-1
+Added Net: Name=NetL1_1
+Added Pin To Net: NetName=NetLED1_1 Pin=LED1-1
+Added Pin To Net: NetName=NetLED1_1 Pin=R1-0
+Added Net: Name=NetLED1_1
+Added Pin To Net: NetName=NetLED2_1 Pin=LED2-1
+Added Pin To Net: NetName=NetLED2_1 Pin=R2-0
+Added Net: Name=NetLED2_1
+Added Pin To Net: NetName=NetR5_0 Pin=R5-0
+Added Pin To Net: NetName=NetR5_0 Pin=R8-1
+Added Net: Name=NetR5_0
+Added Pin To Net: NetName=NetR6_1 Pin=R6-1
+Added Pin To Net: NetName=NetR6_1 Pin=R8-0
+Added Net: Name=NetR6_1
+Added Pin To Net: NetName=PD_BUFF Pin=U1-3A
+Added Pin To Net: NetName=PD_BUFF Pin=U3-2B
+Added Net: Name=PD_BUFF
+Added Pin To Net: NetName=PD Pin=D1-1
+Added Pin To Net: NetName=PD Pin=R6-0
+Added Pin To Net: NetName=PD Pin=U3-1A
+Added Net: Name=PD
+Added Pin To Net: NetName=SCL Pin=J3-1
+Added Pin To Net: NetName=SCL Pin=R4-0
+Added Pin To Net: NetName=SCL Pin=U1-2D
+Added Pin To Net: NetName=SCL Pin=U2-3
+Added Net: Name=SCL
+Added Pin To Net: NetName=SDA Pin=J3-0
+Added Pin To Net: NetName=SDA Pin=R3-0
+Added Pin To Net: NetName=SDA Pin=U1-2B
+Added Pin To Net: NetName=SDA Pin=U2-5
+Added Net: Name=SDA
+Added Pin To Net: NetName=TPICLK Pin=J1-0
+Added Pin To Net: NetName=TPICLK Pin=U1-6D
+Added Net: Name=TPICLK
+Added Pin To Net: NetName=TPIDATA Pin=J1-1
+Added Pin To Net: NetName=TPIDATA Pin=U1-5C
+Added Net: Name=TPIDATA
+Added Pin To Net: NetName=VCC Pin=C1-1
+Added Pin To Net: NetName=VCC Pin=J2-1
+Added Pin To Net: NetName=VCC Pin=R3-1
+Added Pin To Net: NetName=VCC Pin=R4-1
+Added Pin To Net: NetName=VCC Pin=R5-1
+Added Pin To Net: NetName=VCC Pin=U1-6B
+Added Pin To Net: NetName=VCC Pin=U2-7
+Added Pin To Net: NetName=VCC Pin=U3-2A
+Added Net: Name=VCC
+Added Class: Name=sch
+Added Room: Name=sch

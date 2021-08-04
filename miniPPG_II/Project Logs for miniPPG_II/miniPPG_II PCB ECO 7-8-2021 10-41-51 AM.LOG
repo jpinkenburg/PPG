@@ -1,0 +1,8 @@
+Added Component: Designator=U2(NFC)
+Added Pin To Net: NetName=NetL1_1 Pin=U2-1
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Pin To Net: NetName=SCL Pin=U2-3
+Added Pin To Net: NetName=SDA Pin=U2-5
+Added Pin To Net: NetName=VCC Pin=U2-7
+Added Pin To Net: NetName=Ant Pin=U2-8
+Added Member To Class: ClassName=sch Member=Component U2 NFC

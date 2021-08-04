@@ -1,0 +1,12 @@
+Added Component: Designator=U1(Large_attiny)
+Added Pin To Net: NetName=LED1 Pin=U1-1A
+Added Pin To Net: NetName=PD_BUFF Pin=U1-1C
+Added Pin To Net: NetName=LED2 Pin=U1-2B
+Added Pin To Net: NetName=GND Pin=U1-3A
+Added Pin To Net: NetName=GND Pin=U1-4B
+Added Pin To Net: NetName=SDA Pin=U1-4D
+Added Pin To Net: NetName=SCL Pin=U1-5A
+Added Pin To Net: NetName=TPIDATA Pin=U1-5C
+Added Pin To Net: NetName=VCC Pin=U1-6B
+Added Pin To Net: NetName=TPICLK Pin=U1-6D
+Added Member To Class: ClassName=sch Member=Component U1 ATTiny20

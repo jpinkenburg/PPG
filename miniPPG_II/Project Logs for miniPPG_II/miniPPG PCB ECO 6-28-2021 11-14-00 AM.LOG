@@ -1,0 +1,9 @@
+Added Component: Designator=*(ATTINY10)
+Added Pin To Net: NetName=LED1 Pin=*-1A
+Added Pin To Net: NetName=LED2 Pin=*-1C
+Added Pin To Net: NetName=SCL Pin=*-3C
+Added Pin To Net: NetName=GND Pin=*-4B
+Added Pin To Net: NetName=SDA Pin=*-5C
+Added Pin To Net: NetName=VCC Pin=*-6B
+Added Member To Class: ClassName=sch Member=Component * ATTiny20
+Added Room: Name=sch

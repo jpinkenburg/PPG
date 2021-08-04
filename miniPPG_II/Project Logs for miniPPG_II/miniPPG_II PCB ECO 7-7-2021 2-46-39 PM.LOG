@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=SDA Pin=U1-2B
+Removed Pin From Net: NetName=PD_BUFF Pin=U1-3A
+Added Pin To Net: NetName=PD_BUFF Pin=U1-2B
+Added Pin To Net: NetName=SDA Pin=U1-4D

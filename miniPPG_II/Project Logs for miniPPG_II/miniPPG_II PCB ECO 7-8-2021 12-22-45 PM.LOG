@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=GND Pin=U1-1A
+Removed Pin From Net: NetName=LED2 Pin=U1-1C
+Removed Pin From Net: NetName=PD_BUFF Pin=U1-2B
+Removed Pin From Net: NetName=SCL Pin=U1-2D
+Removed Pin From Net: NetName=GND Pin=U1-3A
+Removed Pin From Net: NetName=GND Pin=U1-4B
+Removed Pin From Net: NetName=LED1 Pin=U1-4D
+Removed Pin From Net: NetName=SDA Pin=U1-5A
+Removed Pin From Net: NetName=TPIDATA Pin=U1-5C
+Removed Pin From Net: NetName=VCC Pin=U1-6B
+Removed Pin From Net: NetName=TPICLK Pin=U1-6D
+Removed Member From Class: ClassName=sch Member=U1
+Added Component: Designator=*(ATTINY10)
+Added Pin To Net: NetName=GND Pin=*-1A
+Added Pin To Net: NetName=LED2 Pin=*-1C
+Added Pin To Net: NetName=PD_BUFF Pin=*-2B
+Added Pin To Net: NetName=SCL Pin=*-2D
+Added Pin To Net: NetName=GND Pin=*-3A
+Added Pin To Net: NetName=GND Pin=*-4B
+Added Pin To Net: NetName=LED1 Pin=*-4D
+Added Pin To Net: NetName=SDA Pin=*-5A
+Added Pin To Net: NetName=TPIDATA Pin=*-5C
+Added Pin To Net: NetName=VCC Pin=*-6B
+Added Pin To Net: NetName=TPICLK Pin=*-6D
+Added Member To Class: ClassName=sch Member=Component * ATTiny20

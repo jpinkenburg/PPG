@@ -1,0 +1,13 @@
+Added Component: Designator=LED3(0402)
+Add component (AddParameter): Name = "MPN"; Value = "SFH 4043"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "IR LED"; VariantName = "[No Variations]"
+Added Component: Designator=R9(01005)
+Add component (AddParameter): Name = "MPN"; Value = "CRCW0100220RFREL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "220"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=LED3-0
+Added Pin To Net: NetName=SDA Pin=R9-1
+Added Pin To Net: NetName=NetLED3_1 Pin=LED3-1
+Added Pin To Net: NetName=NetLED3_1 Pin=R9-0
+Added Net: Name=NetLED3_1
+Added Member To Class: ClassName=sch Member=Component LED3 IR
+Added Member To Class: ClassName=sch Member=Component R9 220

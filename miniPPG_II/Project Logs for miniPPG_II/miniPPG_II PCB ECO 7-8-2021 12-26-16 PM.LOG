@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=LED2 Pin=*-1C
+Removed Pin From Net: NetName=PD_BUFF Pin=*-2B
+Change Component Designator: OldDesignator=* NewDesignator=U1
+Change Component Designator: OldDesignator=LED1 NewDesignator=LED2
+Change Component Designator: OldDesignator=LED2 NewDesignator=LED3
+Change Component Designator: OldDesignator=LED3 NewDesignator=LED4
+Change Component Designator: OldDesignator=LED4 NewDesignator=LED1
+Change Component Designator: OldDesignator=R1 NewDesignator=R2
+Change Component Designator: OldDesignator=R2 NewDesignator=R3
+Change Component Designator: OldDesignator=R3 NewDesignator=R5
+Change Component Designator: OldDesignator=R4 NewDesignator=R6
+Change Component Designator: OldDesignator=R5 NewDesignator=R7
+Change Component Designator: OldDesignator=R6 NewDesignator=R10
+Change Component Designator: OldDesignator=R7 NewDesignator=R9
+Change Component Designator: OldDesignator=R9 NewDesignator=R4
+Change Component Designator: OldDesignator=R10 NewDesignator=R1
+Added Pin To Net: NetName=PD_BUFF Pin=U1-1C
+Added Pin To Net: NetName=LED2 Pin=U1-2B
+Change Net Name : Old Net Name=NetLED1_1 New Net Name=NetLED2_1
+Change Net Name : Old Net Name=NetLED2_1 New Net Name=NetLED3_1
+Change Net Name : Old Net Name=NetLED3_1 New Net Name=NetLED4_1
+Change Net Name : Old Net Name=NetLED4_1 New Net Name=NetLED1_1
+Change Net Name : Old Net Name=NetR5_0 New Net Name=NetR7_0
+Change Net Name : Old Net Name=NetR6_1 New Net Name=NetR8_0
+Added Room: Name=sch

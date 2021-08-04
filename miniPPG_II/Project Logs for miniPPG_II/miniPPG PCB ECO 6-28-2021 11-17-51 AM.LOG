@@ -1,0 +1,19 @@
+Added Component: Designator=*(NFC)
+Added Component: Designator=U?(ATTINY10)
+Added Pin To Net: NetName=GND Pin=*-2
+Added Pin To Net: NetName=SCL Pin=*-3
+Added Pin To Net: NetName=SDA Pin=*-5
+Added Pin To Net: NetName=VCC Pin=*-7
+Added Pin To Net: NetName=Ant Pin=*-8
+Added Pin To Net: NetName=LED1 Pin=U?-1A
+Added Pin To Net: NetName=LED2 Pin=U?-1C
+Added Pin To Net: NetName=SCL Pin=U?-3C
+Added Pin To Net: NetName=GND Pin=U?-4B
+Added Pin To Net: NetName=SDA Pin=U?-5C
+Added Pin To Net: NetName=VCC Pin=U?-6B
+Added Pin To Net: NetName=Net*_1 Pin=*-1
+Added Pin To Net: NetName=Net*_1 Pin=L1-1
+Added Net: Name=Net*_1
+Added Member To Class: ClassName=sch Member=Component * NFC
+Added Member To Class: ClassName=sch Member=Component U? ATTiny20
+Added Room: Name=sch

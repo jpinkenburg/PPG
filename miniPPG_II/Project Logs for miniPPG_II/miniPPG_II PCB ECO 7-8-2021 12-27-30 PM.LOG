@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=GND Pin=U1-1A
+Removed Pin From Net: NetName=SCL Pin=U1-2D
+Added Pin To Net: NetName=SCL Pin=U1-1A
+Added Pin To Net: NetName=GND Pin=U1-2D
+Added Member To Class: ClassName=sch Member=Component LED2 Red
+Added Member To Class: ClassName=sch Member=Component LED3 IR
+Added Member To Class: ClassName=sch Member=Component LED4 IR
+Added Member To Class: ClassName=sch Member=Component R2 220
+Added Member To Class: ClassName=sch Member=Component R4 220
+Added Member To Class: ClassName=sch Member=Component R5 4.7k
+Added Member To Class: ClassName=sch Member=Component R6 4.7k
+Added Member To Class: ClassName=sch Member=Component R7 Ohms
+Added Member To Class: ClassName=sch Member=Component R9 220
+Added Member To Class: ClassName=sch Member=Component R10 1M

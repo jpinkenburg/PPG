@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=LED2 Pin=U1-3C
+Added Pin To Net: NetName=LED2 Pin=U1-1C
+Added Member To Class: ClassName=sch Member=Component U1 ATTiny20

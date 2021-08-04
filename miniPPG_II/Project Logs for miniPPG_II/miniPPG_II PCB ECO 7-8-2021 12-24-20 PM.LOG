@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=LED1 Pin=*-4D
+Removed Pin From Net: NetName=SDA Pin=*-5A
+Added Pin To Net: NetName=SDA Pin=*-4D
+Added Pin To Net: NetName=LED1 Pin=*-5A

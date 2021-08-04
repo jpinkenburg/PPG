@@ -1,0 +1,37 @@
+Altium Designer Pick and Place Locations
+C:\Users\Jade\AppData\Local\TempReleases\Snapshot\1\Sources\Pick Place\Pick Place for miniPPG.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       29/06/21
+Time:       12:26
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment          Layer    Footprint              Center-X(mil) Center-Y(mil) Rotation Description                         
+*          0402             TopLayer 0402                   6755.000      1104.000      0        "0402 Component"                    
+U1         ATTiny20         TopLayer ATTINY10               6693.937      1103.189      180      ""                                  
+D1         Photodiode       TopLayer FP-6_541-5064_01-4-MFG 6610.000      1035.000      180      "0805 PHOTODIODE
+temd7000x01"      
+LED2       Green            TopLayer 0201                   6684.173      1040.000      90       "0201 Component
+XZBGR155W5MAV"     
+U2         NFC              TopLayer NFC                    6630.748      1100.945      270      ""                                  
+R7         220              TopLayer 01005                  6590.000      1124.094      180      "01005 Component
+CRCW0100220RFREL" 
+R6         1M               TopLayer 01005                  6679.000      1055.000      90       "01005 Component
+CRCW01001M00FREL" 
+R5         1M               TopLayer 01005                  6702.283      1055.000      90       "01005 Component
+CRCW01001M00FREL" 
+R4         4.7k             TopLayer 01005                  6681.023      1067.496      90       "01005 Component"                   
+R3         4.7k             TopLayer 01005                  6590.000      1077.094      0        "01005 Component"                   
+R2         220              TopLayer 01005                  6710.000      1025.000      0        "01005 Component
+CRCW0100220RFREL" 
+R1         220              TopLayer 01005                  6680.905      1005.000      90       "01005 Component
+CRCW0100220RFREL" 
+LED1       Red              TopLayer 0201                   6684.173      1020.000      270      "0201 Component
+XZMDR155W"         
+L1         "Antenna Header" TopLayer 0402                   6565.000      1100.000      180      "0402 Component"                    
+C2         "0.1 uF"         TopLayer 01005                  6590.000      1100.906      0        "01005 Component"                   
+C1         "0.1 uF"         TopLayer 01005                  6720.000      1060.906      0        "01005 Component"                   

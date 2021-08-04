@@ -1,0 +1,7 @@
+Added Component: Designator=*(0402)
+Add component (AddParameter): Name = "MPN"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=LED2 Pin=*-0
+Added Pin To Net: NetName=SDA Pin=*-1
+Added Member To Class: ClassName=sch Member=Component * 0402
+Added Member To Class: ClassName=sch Member=Component U1 ATTiny20
