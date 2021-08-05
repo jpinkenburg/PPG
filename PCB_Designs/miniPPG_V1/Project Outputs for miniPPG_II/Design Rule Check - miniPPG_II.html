@@ -1,0 +1,443 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">8/4/2021</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11:46:15</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc" class="file"><acronym title="C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc">C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">37</td></tr>
+</table>
+</td>
+</table><a name="IDPT5PZV5DJG0TJF5URXVD4DI1MJDXMQFSTTMLDH1L5JCDER0OHCK"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4JEPJMD5XY4XIFTLX1LQL0OTAGQIXT3QL10OYUFM2LNB00DNU0CG">Clearance Constraint (Gap=4mil) (All),(All)</a></td>
+<td class="column2">34</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZQV3PPJ5KOBJJOATAGHWLI1PILYRIWC5EH143DM53FU2E5TIAL0D">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDF2S3ADE5FWIPHJAOPRB3TONBFPVCHZ2MIW4PNBBJBMHEHYZP1ZOP">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDB2FGXWZJTX5KLJYZ0TZCUBJ4CKO50LM1V143PUHDT2BOVLLKHA0F">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOXWJ3XZLPG13YXZFCEKKHM1PNYGKOJ2QS1MP3ZCSZW4QXMMI5F">Width Constraint (Min=4mil) (Max=10mil) (Preferred=4mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHKWVY3N4SUTNNYJDJ21BB4X5KDVIA5JEPASF2KBO4FE0ZYQWM3ZK">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUPACZII5RBFLN24USOCUXHAFLQQ1DOGJ1TRR1MQTZHVS2DMLZF">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIJZ0ZG4T2Y4CBYANPUQ4BN1RJE5OGATPPFDKWMHOZOT4ZSPZAEAJ">Hole To Hole Clearance (Gap=4mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMFSTI2BHYJO4DQ0ZC4DJO2AGCFGSZWPMWZBBL5LQQL1ZNBQ4SP3G">Minimum Solder Mask Sliver (Gap=3.92mil) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDP3KL1GFM3JEYHBIFD2OG0URGONWTYSHI5FMRVBDPEF1BA3RDOOAH">Silk To Solder Mask (Clearance=0mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTPXPUC2MH1XUGON405F0RL2IGNYF3C302CCRD0BY5PMIVJ2YKBTG">Silk to Silk (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDVU050ZG2YYBHARCO5GJXL3OCDWZALWBUOYUJZPZ4C5HPKSCMACP">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXGKGKPX4EER4JKU4GQBRMFWZ4LGOKS3MDUPEM0PMLZKCAWWWI1QC">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">37</td>
+</tr>
+</table><br><a name="ID4JEPJMD5XY4XIFTLX1LQL0OTAGQIXT3QL10OYUFM2LNB00DNU0CG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=4mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2420.972mil|Location2.X=2428.674mil|Location1.Y=1281.634mil|Location2.Y=1291.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2420.972mil|Location2.X=2428.674mil|Location1.Y=1281.634mil|Location2.Y=1291.7mil|Absolute=True">Clearance Constraint: (5.789mil &lt; 5.906mil) Between Pad C1-1(2418mil,1290mil) on Top Layer And Via (2431mil,1282.139mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2371.046mil|Location2.X=2381.035mil|Location1.Y=1225.554mil|Location2.Y=1233.35mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2371.046mil|Location2.X=2381.035mil|Location1.Y=1225.554mil|Location2.Y=1233.35mil|Absolute=True">Clearance Constraint: (4.944mil &lt; 5.906mil) Between Pad D1-1(2345mil,1251.04mil) on Top Layer And Via (2378mil,1222.186mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2317.422mil|Location2.X=2324.578mil|Location1.Y=1291.737mil|Location2.Y=1298.893mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2317.422mil|Location2.X=2324.578mil|Location1.Y=1291.737mil|Location2.Y=1298.893mil|Absolute=True">Clearance Constraint: (4mil &lt; 5.906mil) Between Pad D1-2(2345mil,1317mil) on Top Layer And Via (2321mil,1288.915mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2291.422mil|Location2.X=2298.578mil|Location1.Y=1253.734mil|Location2.Y=1260.89mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2291.422mil|Location2.X=2298.578mil|Location1.Y=1253.734mil|Location2.Y=1260.89mil|Absolute=True">Clearance Constraint: (5.124mil &lt; 5.906mil) Between Pad J2-0(2297mil,1271.685mil) on Top Layer And Via (2295mil,1250mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2429.968mil|Location2.X=2435.118mil|Location1.Y=1203.646mil|Location2.Y=1208.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2429.968mil|Location2.X=2435.118mil|Location1.Y=1203.646mil|Location2.Y=1208.795mil|Absolute=True">Clearance Constraint: (2.567mil &lt; 3.9mil) Between Pad R5-0(2429mil,1201mil) on Top Layer And Pad U2-1(2434.937mil,1215.378mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2456.433mil|Location2.X=2461.583mil|Location1.Y=1203.146mil|Location2.Y=1208.295mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2456.433mil|Location2.X=2461.583mil|Location1.Y=1203.146mil|Location2.Y=1208.295mil|Absolute=True">Clearance Constraint: (3.678mil &lt; 3.9mil) Between Pad R6-0(2463mil,1200mil) on Top Layer And Pad U2-2(2454.622mil,1215.378mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2468.693mil|Location2.X=2473.843mil|Location1.Y=1203.146mil|Location2.Y=1208.295mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2468.693mil|Location2.X=2473.843mil|Location1.Y=1203.146mil|Location2.Y=1208.295mil|Absolute=True">Clearance Constraint: (3.567mil &lt; 3.9mil) Between Pad R6-1(2474.811mil,1200mil) on Top Layer And Pad U2-3(2474.307mil,1215.378mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2287.906mil|Location2.X=2295.061mil|Location1.Y=1186.539mil|Location2.Y=1193.694mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2287.906mil|Location2.X=2295.061mil|Location1.Y=1186.539mil|Location2.Y=1193.694mil|Absolute=True">Clearance Constraint: (5.893mil &lt; 5.906mil) Between Pad R8-1(2292.189mil,1197mil) on Top Layer And Via (2291.484mil,1181.92mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2393.422mil|Location2.X=2400.578mil|Location1.Y=1205.401mil|Location2.Y=1212.556mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2393.422mil|Location2.X=2400.578mil|Location1.Y=1205.401mil|Location2.Y=1212.556mil|Absolute=True">Clearance Constraint: (4.957mil &lt; 5.906mil) Between Pad R9-0(2396mil,1215mil) on Top Layer And Via (2397mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2435.971mil|Location2.X=2444.999mil|Location1.Y=1202.996mil|Location2.Y=1210.894mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2435.971mil|Location2.X=2444.999mil|Location1.Y=1202.996mil|Location2.Y=1210.894mil|Absolute=True">Clearance Constraint: (2.3mil &lt; 5.906mil) Between Pad U2-1(2434.937mil,1215.378mil) on Top Layer And Via (2442.866mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2445.038mil|Location2.X=2452.927mil|Location1.Y=1200.507mil|Location2.Y=1209.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2445.038mil|Location2.X=2452.927mil|Location1.Y=1200.507mil|Location2.Y=1209.625mil|Absolute=True">Clearance Constraint: (5.062mil &lt; 5.906mil) Between Pad U2-2(2454.622mil,1215.378mil) on Top Layer And Via (2442.866mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2445.768mil|Location2.X=2455.59mil|Location1.Y=1222.198mil|Location2.Y=1230.013mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2445.768mil|Location2.X=2455.59mil|Location1.Y=1222.198mil|Location2.Y=1230.013mil|Absolute=True">Clearance Constraint: (5.715mil &lt; 5.906mil) Between Pad U2-2(2454.622mil,1215.378mil) on Top Layer And Via (2445.898mil,1232.275mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2455.32mil|Location2.X=2462.475mil|Location1.Y=1249.203mil|Location2.Y=1256.358mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2455.32mil|Location2.X=2462.475mil|Location1.Y=1249.203mil|Location2.Y=1256.358mil|Absolute=True">Clearance Constraint: (3.993mil &lt; 5.906mil) Between Pad U2-6(2454.622mil,1262.622mil) on Top Layer And Via (2460mil,1246.378mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2436.717mil|Location2.X=2444.383mil|Location1.Y=1230.921mil|Location2.Y=1241.251mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2436.717mil|Location2.X=2444.383mil|Location1.Y=1230.921mil|Location2.Y=1241.251mil|Absolute=True">Clearance Constraint: (3.056mil &lt; 5.906mil) Between Pad U2-8(2431mil,1239mil) on Top Layer And Via (2445.898mil,1232.275mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2317.422mil|Location2.X=2324.578mil|Location1.Y=1278.937mil|Location2.Y=1286.093mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2317.422mil|Location2.X=2324.578mil|Location1.Y=1278.937mil|Location2.Y=1286.093mil|Absolute=True">Clearance Constraint: (4mil &lt; 5.906mil) Between Track (2303.33mil,1278.015mil)(2345.723mil,1278.015mil) on Top Layer And Via (2321mil,1288.915mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2323.347mil|Location2.X=2332.734mil|Location1.Y=1208.548mil|Location2.Y=1216.332mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2323.347mil|Location2.X=2332.734mil|Location1.Y=1208.548mil|Location2.Y=1216.332mil|Absolute=True">Clearance Constraint: (5.416mil &lt; 5.906mil) Between Track (2316mil,1208.811mil)(2324.352mil,1208.811mil) on Top Layer And Via (2331mil,1219mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2323.347mil|Location2.X=2332.734mil|Location1.Y=1208.548mil|Location2.Y=1216.332mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2323.347mil|Location2.X=2332.734mil|Location1.Y=1208.548mil|Location2.Y=1216.332mil|Absolute=True">Clearance Constraint: (5.416mil &lt; 5.906mil) Between Track (2324.352mil,1208.811mil)(2336.037mil,1197.126mil) on Top Layer And Via (2331mil,1219mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2374.422mil|Location2.X=2381.578mil|Location1.Y=1210.89mil|Location2.Y=1218.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2374.422mil|Location2.X=2381.578mil|Location1.Y=1210.89mil|Location2.Y=1218.046mil|Absolute=True">Clearance Constraint: (4.936mil &lt; 5.906mil) Between Track (2360.91mil,1208mil)(2381mil,1208mil) on Bottom Layer And Via (2378mil,1222.186mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2371.338mil|Location2.X=2379.136mil|Location1.Y=1208.576mil|Location2.Y=1217.839mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2371.338mil|Location2.X=2379.136mil|Location1.Y=1208.576mil|Location2.Y=1217.839mil|Absolute=True">Clearance Constraint: (4.233mil &lt; 5.906mil) Between Track (2364.634mil,1215.603mil)(2369.865mil,1215.603mil) on Top Layer And Via (2381mil,1208mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2372.296mil|Location2.X=2380.234mil|Location1.Y=1209.549mil|Location2.Y=1217.557mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2372.296mil|Location2.X=2380.234mil|Location1.Y=1209.549mil|Location2.Y=1217.557mil|Absolute=True">Clearance Constraint: (4mil &lt; 5.906mil) Between Track (2369.865mil,1215.603mil)(2372.12mil,1217.858mil) on Top Layer And Via (2381mil,1208mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2375.574mil|Location2.X=2382.729mil|Location1.Y=1210.649mil|Location2.Y=1217.805mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2375.574mil|Location2.X=2382.729mil|Location1.Y=1210.649mil|Location2.Y=1217.805mil|Absolute=True">Clearance Constraint: (5.584mil &lt; 5.906mil) Between Track (2374.053mil,1202mil)(2380.053mil,1208mil) on Top Layer And Via (2378mil,1222.186mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2375.793mil|Location2.X=2382.948mil|Location1.Y=1212.127mil|Location2.Y=1219.282mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2375.793mil|Location2.X=2382.948mil|Location1.Y=1212.127mil|Location2.Y=1219.282mil|Absolute=True">Clearance Constraint: (5.25mil &lt; 5.906mil) Between Track (2378mil,1222.186mil)(2378mil,1253mil) on Bottom Layer And Via (2381mil,1208mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2375.574mil|Location2.X=2382.729mil|Location1.Y=1210.649mil|Location2.Y=1217.805mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2375.574mil|Location2.X=2382.729mil|Location1.Y=1210.649mil|Location2.Y=1217.805mil|Absolute=True">Clearance Constraint: (5.584mil &lt; 5.906mil) Between Track (2380.053mil,1208mil)(2381mil,1208mil) on Top Layer And Via (2378mil,1222.186mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2388.642mil|Location2.X=2396.65mil|Location1.Y=1192.86mil|Location2.Y=1200.797mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2388.642mil|Location2.X=2396.65mil|Location1.Y=1192.86mil|Location2.Y=1200.797mil|Absolute=True">Clearance Constraint: (4.521mil &lt; 5.906mil) Between Track (2381.861mil,1200.139mil)(2390.5mil,1191.5mil) on Top Layer And Via (2397mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2391.88mil|Location2.X=2399.035mil|Location1.Y=1205.371mil|Location2.Y=1212.526mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2391.88mil|Location2.X=2399.035mil|Location1.Y=1205.371mil|Location2.Y=1212.526mil|Absolute=True">Clearance Constraint: (5.236mil &lt; 5.906mil) Between Track (2388.216mil,1213.457mil)(2394.457mil,1213.457mil) on Top Layer And Via (2397mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2393.422mil|Location2.X=2400.578mil|Location1.Y=1191.672mil|Location2.Y=1198.828mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2393.422mil|Location2.X=2400.578mil|Location1.Y=1191.672mil|Location2.Y=1198.828mil|Absolute=True">Clearance Constraint: (4.5mil &lt; 5.906mil) Between Track (2390.5mil,1191mil)(2447.216mil,1191mil) on Top Layer And Via (2397mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.289mil|Location2.X=2446.444mil|Location1.Y=1191.672mil|Location2.Y=1198.828mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.289mil|Location2.X=2446.444mil|Location1.Y=1191.672mil|Location2.Y=1198.828mil|Absolute=True">Clearance Constraint: (4.5mil &lt; 5.906mil) Between Track (2390.5mil,1191mil)(2447.216mil,1191mil) on Top Layer And Via (2442.866mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2391.88mil|Location2.X=2399.035mil|Location1.Y=1205.371mil|Location2.Y=1212.526mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2391.88mil|Location2.X=2399.035mil|Location1.Y=1205.371mil|Location2.Y=1212.526mil|Absolute=True">Clearance Constraint: (5.236mil &lt; 5.906mil) Between Track (2394.457mil,1213.457mil)(2396mil,1215mil) on Top Layer And Via (2397mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2385.45mil|Location2.X=2392.605mil|Location1.Y=1204.422mil|Location2.Y=1211.578mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2385.45mil|Location2.X=2392.605mil|Location1.Y=1204.422mil|Location2.Y=1211.578mil|Absolute=True">Clearance Constraint: (5.555mil &lt; 5.906mil) Between Track (2395.805mil,1202.957mil)(2395.805mil,1231.012mil) on Bottom Layer And Via (2381mil,1208mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.289mil|Location2.X=2446.444mil|Location1.Y=1191.922mil|Location2.Y=1199.078mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.289mil|Location2.X=2446.444mil|Location1.Y=1191.922mil|Location2.Y=1199.078mil|Absolute=True">Clearance Constraint: (4mil &lt; 5.906mil) Between Track (2407.262mil,1191.5mil)(2468.095mil,1191.5mil) on Bottom Layer And Via (2442.866mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2443.885mil|Location2.X=2451.823mil|Location1.Y=1193.826mil|Location2.Y=1201.834mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2443.885mil|Location2.X=2451.823mil|Location1.Y=1193.826mil|Location2.Y=1201.834mil|Absolute=True">Clearance Constraint: (4mil &lt; 5.906mil) Between Track (2447.216mil,1191.5mil)(2453.457mil,1197.741mil) on Top Layer And Via (2442.866mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2445.834mil|Location2.X=2452.989mil|Location1.Y=1198.422mil|Location2.Y=1205.578mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2445.834mil|Location2.X=2452.989mil|Location1.Y=1198.422mil|Location2.Y=1205.578mil|Absolute=True">Clearance Constraint: (4.09mil &lt; 5.906mil) Between Track (2453.457mil,1197.741mil)(2453.457mil,1213.441mil) on Top Layer And Via (2442.866mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2373.954mil|Location2.X=2390.45mil|Location1.Y=1209.547mil|Location2.Y=1220.639mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2373.954mil|Location2.X=2390.45mil|Location1.Y=1209.547mil|Location2.Y=1220.639mil|Absolute=True">Clearance Constraint: (4mil &lt; 9.842mil) Between Via (2378mil,1222.186mil) from Top Layer to Bottom Layer And Via (2381mil,1208mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2383.805mil|Location2.X=2394.897mil|Location1.Y=1199.322mil|Location2.Y=1215.369mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2383.805mil|Location2.X=2394.897mil|Location1.Y=1199.322mil|Location2.Y=1215.369mil|Absolute=True">Clearance Constraint: (7.338mil &lt; 9.842mil) Between Via (2381mil,1208mil) from Top Layer to Bottom Layer And Via (2397mil,1202mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDMFSTI2BHYJO4DQ0ZC4DJO2AGCFGSZWPMWZBBL5LQQL1ZNBQ4SP3G"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=3.92mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2428.415mil|Location2.X=2433.585mil|Location1.Y=1203.636mil|Location2.Y=1208.805mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2428.415mil|Location2.X=2433.585mil|Location1.Y=1203.636mil|Location2.Y=1208.805mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.567mil &lt; 3.92mil) Between Pad R5-0(2429mil,1201mil) on Top Layer And Pad U2-1(2434.937mil,1215.378mil) on Top Layer [Top Solder] Mask Sliver [2.567mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2456.423mil|Location2.X=2461.593mil|Location1.Y=1203.136mil|Location2.Y=1208.305mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2456.423mil|Location2.X=2461.593mil|Location1.Y=1203.136mil|Location2.Y=1208.305mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.678mil &lt; 3.92mil) Between Pad R6-0(2463mil,1200mil) on Top Layer And Pad U2-2(2454.622mil,1215.378mil) on Top Layer [Top Solder] Mask Sliver [3.678mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2475.659mil|Location2.X=2480.829mil|Location1.Y=1203.136mil|Location2.Y=1208.305mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Jade\OneDrive - Cornell University\Documents\summer21\Penn\ppg\PCB_Designs\miniPPG_V1\miniPPG_II.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2475.659mil|Location2.X=2480.829mil|Location1.Y=1203.136mil|Location2.Y=1208.305mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.567mil &lt; 3.92mil) Between Pad R6-1(2474.811mil,1200mil) on Top Layer And Pad U2-3(2474.307mil,1215.378mil) on Top Layer [Top Solder] Mask Sliver [3.567mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
